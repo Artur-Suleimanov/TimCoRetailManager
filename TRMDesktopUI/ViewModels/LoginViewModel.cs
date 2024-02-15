@@ -13,8 +13,8 @@ namespace TRMDesktopUI.ViewModels
     {
         private readonly IAPIHelper _apiHelper;
         private readonly IEventAggregator _events;
-        private string _userName;
-        private string _password;
+        private string _userName = "tim@iamtimcorey.com";
+        private string _password = "Pwd12345.";
 
         public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
