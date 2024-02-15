@@ -21,8 +21,8 @@ namespace TRMDesktopUI
                 typeof(FrameworkElement),
                 new FrameworkPropertyMetadata(
                     XmlLanguage.GetLanguage(
-                        new CultureInfo("en-US").IetfLanguageTag
-                    /*CultureInfo.CurrentCulture.IetfLanguageTag*/)));
+                        //new CultureInfo("en-US").IetfLanguageTag
+                    CultureInfo.CurrentCulture.IetfLanguageTag)));
             base.OnStartup(e);
         }
     }
