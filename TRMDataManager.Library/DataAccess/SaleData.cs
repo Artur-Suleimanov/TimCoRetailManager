@@ -52,8 +52,6 @@ namespace TRMDataManager.Library.DataAccess
 
             sale.Total = sale.SubTotal + sale.Tax;
 
-            
-
             using(SqlDataAccess sql = new SqlDataAccess())
             {
                 try
@@ -82,6 +80,15 @@ namespace TRMDataManager.Library.DataAccess
                     throw;
                 }
             }
+        }
+
+        public List<SaleReportModel> GetSaleReport()
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            var output = sql.LoadData<SaleReportModel, dynamic>("spSale_SaleReport", new { }, "TRMData");  
+
+            return output;
         }
     }
 }
